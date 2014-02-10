@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>css3 webkit-box实现自适应排列</title>
+<style type="text/css">
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif; color:#333; margin:0 auto; }
+table{border-collapse:collapse;border-spacing:0;}
+
+a{color:#333;text-decoration:none;}
+.nav{display: -webkit-box;-webkit-box-pack: justify;height: 40px;line-height: 40px;
+background: #242424 -webkit-gradient(linear,0 0, 0 100%,from(#3D3D3D),color-stop(100%,#242424));-webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, .1);text-shadow: -1px 1px black;}
+.nav li{-webkit-box-flex: 1;text-align: center;font-size: 16px; color:#ccc; height:40px;}
+.nav li.on {background: #242424 -webkit-gradient(linear,0 0, 0 100%,from(#2C2C2C),color-stop(95%,#2C2C2C),color-stop(95%,#F60),color-stop(100%,#F60));
+-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, .5);
+color: white;}
+</style>
+</head>
+<body>
+   <ul class="nav"> 
+   	  <li class="on">首页</li>
+	  <li>产品</li>
+	  <li>新闻</li>
+	  <li>招骋</li>   
+   </ul>       
+</body>
+</html>

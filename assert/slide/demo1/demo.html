@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>slide</title>
+<link href="css/css.css" rel="stylesheet" type="text/css">	
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+var timer;
+var i=-1;
+var offset=3000;
+function roll(){
+	i++;
+	if(i>3){
+		i=0;
+	}
+	slide(i);
+	timer=setTimeout(roll,offset)
+}
+function slide(i){
+	$('.big a').eq(i).fadeIn().siblings().hide();
+	$('.num li').eq(i).siblings().removeClass('on');
+	$('.num li').eq(i).addClass('on');
+}
+function stopBig(){
+	$('.big').hover(function(){
+		clearTimeout(timer);
+	},function(){
+		timer=setTimeout(roll,offset);
+	});
+}
+function stoproll(){
+	$('.num li').hover(function(){
+		clearTimeout(timer);
+		i=$(this).index();
+		slide(i);
+	},function(){
+		timer=setTimeout(roll,offset);
+	})
+}
+$(function(){
+	roll();
+	stoproll();
+	stopBig()
+})
+</script>
+</head>
+<body>
+<div class="box-163css">
+	<div class="txtbg">&nbsp;</div>
+	<div class="big">
+		<a href="#" style="display:block"><img src="images/1.jpg" /><span>1</span></a>
+		<a href="#"><img src="images/2.jpg" /><span>2</span></a>
+		<a href="#"><img src="images/3.jpg" /><span>3</span></a>
+		<a href="#"><img src="images/4.jpg" /><span>4</span></a>
+	</div>
+	<ul class="num">
+		<li class="on"><img src="images/1s.jpg" /></li>
+		<li><img src="images/2s.jpg" /></li>
+		<li><img src="images/3s.jpg" /></li>
+		<li><img src="images/4s.jpg" /></li>
+	</ul>
+</div>
+</body>
+</html>

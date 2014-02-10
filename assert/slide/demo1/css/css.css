@@ -1,0 +1,17 @@
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;  text-align:center; margin:0 auto; }
+table{border-collapse:collapse;border-spacing:0;}
+a{ color:#333; text-decoration:none;}
+.box-163css{ width:420px; margin:20px auto; position:relative; overflow:hidden; text-align:left;}
+.box-163css img{border:0px; width:420px;}
+.big{ width:100%; float:left; height:196px; overflow:hidden; margin-bottom:2px;}
+.big a{ display:none;}
+.big span{ position:absolute; left:0; top:167px; font-size:13px; color:#fff; z-index:11; height:30px; line-height:30px; text-indent:1em; width:100%; )}
+.num{ width:424px; margin-right:-24px; float:left; height:53px; padding-top:2px;}
+.num li{ width:99px; padding-top:5px; padding-left:1px; cursor:pointer; float:left; margin-right:6px;height:48px;}
+.num img{ width:98px;}
+.num li.on{ background:url(../images/bg01.gif) no-repeat 0 0;}
+.txtbg{ position:absolute; left:0; top:167px; width:100%; height:30px; background:#000; opacity:0.5;filter:alpha(opacity=50); z-index:10;}

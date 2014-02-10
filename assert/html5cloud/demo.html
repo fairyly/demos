@@ -1,0 +1,77 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+<title>html5cloud</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<style type="text/css">
+canvas{ 
+    border:1px solid #E6E6E6; 
+    margin: 0 16px 4px 0; 
+    padding: 8px 8px 8px 8px; 
+}
+</style>
+</head>
+    <div id="myCanvasContainer">
+        <canvas id="myCanvas" style=""></canvas>
+    </div>
+    <div id="tags" style="display: none;">
+        <ul>
+            <li><a href="http://yiquwei.com/">图书</a></li>
+            <li><a href="http://yiquwei.com/">人物</a></li>
+            <li><a href="http://yiquwei.com/">历史</a></li>
+            <li><a href="http://yiquwei.com/">地理</a></li>
+            <li><a href="http://yiquwei.com/">jQuery</a></li>
+            <li><a href="http://yiquwei.com/">BootStrap</a></li>
+            <li><a href="http://yiquwei.com/">VimWiki</a></li>
+            <li><a href="http://yiquwei.com/">Linux</a></li>
+            <li><a href="http://yiquwei.com/">札记</a></li>
+            <li><a href="http://yiquwei.com/">网络</a></li>
+            <li><a href="http://yiquwei.com/">HTML5</a></li>
+            <li><a href="http://yiquwei.com/">JavaScript</a></li>
+            <li><a href="http://yiquwei.com/">Mysql</a></li>
+            <li><a href="http://yiquwei.com/">PHP</a></li>
+            <li><a href="http://yiquwei.com/">Python</a></li>
+            <li><a href="http://yiquwei.com/">C++</a></li>
+        </ul>
+    </div>
+<body>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="js/jquery.tagcanvas-1.18.min.js"></script>
+<script>
+$(document).ready(function() {
+    /* all external links open in new tab 可以用纯css替换*/ 
+    $("a[href^='http://']").each(function(){
+        this.target = "_blank";
+    });
+    $("a[href^='https://']").each(function(){
+        this.target = "_blank";
+    });
+
+    /* html5 tag clouds */
+    if(!$("#myCanvas").tagcanvas({
+        textColour: "#00F",
+        outlineColour: "#FF9999",
+        textHeight: 20,
+        minBrightnes: 0.2,
+        pulsateTo: 0.6,
+        initial: [0.1,-0.1],
+        reverse: true,
+        depth: 0.92,
+        decel: 0.98,
+        shadow: "#CCF",
+        shadowBlur: 1,
+        reverse: true,
+        outlineThickness: 1,
+        maxSpeed: 0.08 }, "tags")) {
+        $("#myCanvasContainer").hide();
+    }
+});
+</script>
+</body>
+</html>  
+
+
+
+
+

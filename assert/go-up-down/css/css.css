@@ -1,0 +1,15 @@
+.tb{
+	position: fixed;
+	z-index: 999;
+	top:80%;
+	left:95%;
+}
+.tb img{
+	height:50px;
+	width:50px;
+}
+
+
+
+
+

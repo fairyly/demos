@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>js代码ZeroClipboard组件复制剪切板</title>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/ZeroClipboard.js"></script>
+		<script type="text/javascript">
+			ZeroClipboard.setMoviePath("swf/ZeroClipboard.swf");
+			$(document).ready(function(){
+				$("a[id^=copy_]").each(function(){
+					var clip = new ZeroClipboard.Client(); 	
+					clip.setHandCursor(true); 
+					var obj = $(this);
+			        var id = $(this).attr("id");
+			        // 要复制的内容
+			        var content = $(this).attr("copyContent");
+					clip.setText(content);  
+					clip.glue(id);
+					//这个是复制成功后的提示  
+					clip.addEventListener("complete", function(){  
+					    alert("已经复制到剪切板！"+"\n"+content);   
+					}); 
+				});
+			});
+
+
+         //上面的代码无法实现的话  试试下面的
+
+		// ZeroClipboard.setMoviePath("${ctx}/resources/js/ZeroClipboard.swf");
+		// jQuery(document).ready(function(){
+		// 	jQuery("a[id^=copy_]").each(function(){
+		// 		var clip = new ZeroClipboard.Client(); 	
+		// 		clip.setHandCursor(true); 
+		// 		var obj = jQuery(this);
+		//         var id = jQuery(this).attr("id");
+		//         var goodsId = id.split("_");
+		//         setcopyContent(id,clip);
+		//         // 要复制的内容
+		//         //var content = jQuery(this).attr("copyContent");
+		// 		//clip.setText(content);  
+		// 		//clip.glue(id);
+		// 		//这个是复制成功后的提示  
+		// 		clip.addEventListener( "complete", function(){  
+		// 		    alert("已经复制到剪切板！"+"\n");   
+		// 		}); 
+		// 	});
+	 //    }
+		// function setcopyContent(id,obj)
+		// {
+		// 	var goodsId = id.split("_");
+		// 	jQuery.ajax({
+		// 		type : "POST",
+		// 		url : "goods.do",
+		// 		data : {
+		// 			"method" : "getCopyContent",
+		// 			"id" : goodsId[1]
+		// 		},
+		// 		success : function(result) {
+		// 			copyContent="http://api.paitao.com/server/forward?id="+result;
+		// 			jQuery("#copy_"+id).attr("copyContent",copyContent);
+		// 			obj.setText(copyContent);  
+		// 			obj.glue(id);
+		// 		}
+		// 	});
+		// }
+		</script>
+	</head>
+
+	<body>
+		<table>
+			<tr>
+				<td>
+				<a href="javascript:void(0);" id="copy_1" copyContent="http://api.paitao.com/server/forward?id=1" >复制链接</a>	
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<a href="javascript:void(0);" id="copy_2" copyContent="http://api.paitao.com/server/forward?id=2" >复制链接</a>	
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<a href="javascript:void(0);" id="copy_3" copyContent="http://api.paitao.com/server/forward?id=3" >复制链接</a>	
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

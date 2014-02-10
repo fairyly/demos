@@ -1,0 +1,26 @@
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif; background:#f7f7f7;  text-align:center; margin:0 auto; color:#2b2b2b; overflow:hidden;}
+table{border-collapse:collapse;border-spacing:0;}
+html{ height:100%;}
+
+.box_163css{width:430px;margin: 100px auto; height:430px; position:relative;}
+@-webkit-keyframes myrotate{
+ 0%{
+	 -webkit-transform : rotate(0deg);
+ }    
+ 100%{
+	 -webkit-transform : rotate(360deg);
+ }
+}
+.rotateCD{-webkit-animation:myrotate 9.5s infinite linear;-webkit-animation-play-state:paused;}
+.rotateCD_go{-webkit-animation: myrotate 9.5s infinite linear;-webkit-animation-play-state:running;}
+.b_star{ position:absolute; left:185px; top:180px; display:block; cursor:pointer; background:url(../images/playCtl.png) no-repeat -200px 0; width:69px; height:69px;}
+.b_star em{ display:block; background:url(../images/playCtl.png) no-repeat -28px -24px; width:22px; height:22px; margin:25px 0 0 28px; float:left;}
+.b_stop em{ background-position:-123px -24px; margin-left:24px;}
+
+#musicBox{position: relative;width: 430px;height: 430px;margin: 0 auto;overflow: hidden;}
+#musicBox .cover{width: 300px;height: 300px;margin: 65px;background: url(../images/img01.jpg) no-repeat;}
+#musicBox .mask{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: url(../images/playerMask.png) 0 0 no-repeat;}

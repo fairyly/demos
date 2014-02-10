@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>启动图</title>
+<style type="text/css">
+body{
+    margin: 0;
+    padding: 0;
+}
+#wrapper {
+    float:left;
+    position:relative;
+    z-index:1;          
+    overflow:hidden;
+}
+
+.zhezhaoimg{
+    z-index: 10;
+    position: absolute;
+}
+
+#scroller {
+    float:left;
+    padding:0;
+}
+
+#scroller ul {
+    list-style:none;
+    display:block;
+    float:left;
+    width:100%;
+    padding:0;
+    margin:0;
+    text-align:left;
+}
+
+#scroller li {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+    display:block; 
+    float:left;
+    font-family:georgia;
+    text-align:center;
+}
+</style>
+</head>
+<body>
+
+<div id="notNetwork" style="display: none;" onclick="reloadCurrentPage()">
+    <div style="margin-top: 40%;">
+        <img src="img/nonetwork.png" style="width:70%;margin-left: 15%">
+    </div>
+    <p style="color:#d66a24;font-family: 微软雅黑;width: 100%;text-align: center;">亲，您的网络不给力！请检查一下网络设置</p>
+</div>
+
+<div id="bodyHtml">
+    <div id="wrapper">
+        <div id="scroller">
+            <ul>
+                <li>
+                    <div id="zhezhaoimg" class="zhezhaoimg">
+                        <img  src="img/zhezhao.png" width="100%" style="display: block;">
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)">
+                            <img width="100%"  id="img1" style="display: block;" src="img/logo_main.jpg" />
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/zepto.min.js"></script>
+<script src="js/touch.js"></script>
+<script type="text/javascript">
+var touch={};
+var touchElem=$("body");
+$(touchElem).unbind().bind("touchstart",function( e ){
+    touch.x1 = e.touches[0].pageX;
+}).bind("touchmove",function( e ){
+    touch.x2 = e.touches[0].pageX;
+    touch.x3 = touch.endx+(touch.x2-touch.x1);
+    e.preventDefault();
+}).bind("touchend",function( e ){
+    console.log(touch.x2+"##########"+touch.x1)
+    if(Math.abs(touch.x2 - touch.x1) >=60 && touch.x1>touch.x2){
+        window.location.href="page1.html";
+    }
+ 
+}).bind('touchcancel', function(){
+
+})
+window.onresize=function(){
+    var nowHeight = parseInt(screen.height)/(parseInt(screen.width)/parseInt(document.body.offsetWidth));
+    $("#wrapper").width(document.body.offsetWidth);
+    $("#wrapper").height(nowHeight);
+    $("#scroller").width(document.body.offsetWidth);
+    $("#scroller li").width(document.body.offsetWidth);
+    $("#scroller li").height(nowHeight);
+    $("#scroller img").width(document.body.offsetWidth);
+    $("#scroller img").height(nowHeight);
+};
+initSize();
+function initSize(){
+    var nowHeight = parseInt(screen.height)/(parseInt(screen.width)/parseInt(document.body.offsetWidth));
+    $("#wrapper").width(document.body.offsetWidth);
+    $("#wrapper").height(nowHeight);
+    $("#scroller").width(document.body.offsetWidth);
+    $("#scroller li").width(document.body.offsetWidth);
+    $("#scroller li").height(nowHeight);
+    $("#scroller img").width(document.body.offsetWidth);
+    $("#scroller img").height(nowHeight);
+    if(localStorage.getItem("isFirstStart")=='null'||localStorage.getItem("isFirstStart")==''||localStorage.getItem("isFirstStart")==null){
+    
+    }
+    else{
+        $("#zhezhaoimg").hide();
+    }
+}
+
+//没有网络的时候调用 函数解析阶段优先级大于变量
+function notNetwork(){
+
+    $("#bodyHtml").hide();
+    $("#notNetwork").show();
+
+}
+if(window.myAndroidJs!==undefined){
+    if(!window.myAndroidJs.checkNetwork()){
+        
+        notNetwork();
+        
+    }
+}
+function reloadCurrentPage(){
+    
+    window.myAndroidJs.woringNetwork(window.location.href + "");
+
+}
+</script>
+</body>
+</html>

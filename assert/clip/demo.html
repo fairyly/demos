@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
+<title>用clip属性来隐藏checkbox</title>
+<style>
+.item{
+	width: 60%;
+	margin: 0 auto;
+}
+ul{
+	list-style: none;
+}
+.item li {
+	display: inline-block;
+	zoom: 1;
+	width: 66px;
+	border: 1px solid #eaeaea;
+	margin: 0 4px 4px 0;
+	vertical-align: top;
+	text-align: center;
+	font-size: 12px;
+	background: #fff;
+}
+.item li.on {
+	border-color: #afcb9f;
+	background: #d6e9c4;
+}
+.item li label {
+	padding: 7px 0;
+	display: block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+.item li label input {
+	position: absolute;
+	clip: rect(0 0 0 0);
+}
+</style>
+</head>
+
+<body>
+	<div class="item">
+        <ul> 
+            <li class="">
+                <label for="setting-interest-18">
+                    <input type="checkbox" name="editor_2" value="18" id="setting-interest-18">
+                    美食
+                </label>
+            </li>
+            <li class="on">
+                <label for="setting-interest-16">
+                    <input type="checkbox" name="editor_2" value="16" id="setting-interest-16" checked="&quot;checked&quot;">
+                    旅行
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-21">
+                    <input type="checkbox" name="editor_2" value="21" id="setting-interest-21">
+                    趣味
+                </label>
+            </li>
+              
+            <li class="on">
+                <label for="setting-interest-9">
+                    <input type="checkbox" name="editor_2" value="9" id="setting-interest-9" checked="&quot;checked&quot;">
+                    摄影
+                </label>
+            </li>
+              
+            <li class="on">
+                <label for="setting-interest-1">
+                    <input type="checkbox" name="editor_2" value="1" id="setting-interest-1" checked="&quot;checked&quot;">
+                    电影
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-6">
+                    <input type="checkbox" name="editor_2" value="6" id="setting-interest-6">
+                    人文
+                </label>
+            </li>
+              
+            <li class="on">
+                <label for="setting-interest-5">
+                    <input type="checkbox" name="editor_2" value="5" id="setting-interest-5" checked="&quot;checked&quot;">
+                    艺术
+                </label>
+            </li>
+              
+            <li class="on">
+                <label for="setting-interest-20">
+                    <input type="checkbox" name="editor_2" value="20" id="setting-interest-20" checked="&quot;checked&quot;">
+                    娱乐
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-3">
+                    <input type="checkbox" name="editor_2" value="3" id="setting-interest-3">
+                    读书
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-17">
+                    <input type="checkbox" name="editor_2" value="17" id="setting-interest-17">
+                    居家
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-11">
+                    <input type="checkbox" name="editor_2" value="11" id="setting-interest-11">
+                    历史
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-10">
+                    <input type="checkbox" name="editor_2" value="10" id="setting-interest-10">
+                    自然
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-14">
+                    <input type="checkbox" name="editor_2" value="14" id="setting-interest-14">
+                    体育
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-13">
+                    <input type="checkbox" name="editor_2" value="13" id="setting-interest-13">
+                    健康
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-28">
+                    <input type="checkbox" name="editor_2" value="28" id="setting-interest-28">
+                    创意
+                </label>
+            </li>
+              
+            <li class="">
+               <label for="setting-interest-19">
+                    <input type="checkbox" name="editor_2" value="19" id="setting-interest-19">
+                    宠物
+                </label>
+            </li>
+              
+            <li class="on">
+                <label for="setting-interest-2">
+                    <input type="checkbox" name="editor_2" value="2" id="setting-interest-2" checked="&quot;checked&quot;">
+                    音乐
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-4">
+                    <input type="checkbox" name="editor_2" value="4" id="setting-interest-4">
+                    时尚
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-30">
+                    <input type="checkbox" name="editor_2" value="30" id="setting-interest-30">
+                    星座
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-7">
+                    <input type="checkbox" name="editor_2" value="7" id="setting-interest-7">
+                    建筑
+                </label>
+            </li>
+              
+            <li class="on">
+                <label for="setting-interest-29">
+                    <input type="checkbox" name="editor_2" value="29" id="setting-interest-29" checked="&quot;checked&quot;">
+                    科技
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-22">
+                    <input type="checkbox" name="editor_2" value="22" id="setting-interest-22">
+                    财经
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-23">
+                    <input type="checkbox" name="editor_2" value="23" id="setting-interest-23">
+                    动漫
+                </label>
+            </li>
+              
+            <li class="on">
+                <label for="setting-interest-26">
+                    <input type="checkbox" name="editor_2" value="26" id="setting-interest-26" checked="&quot;checked&quot;">
+                    美女
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-12">
+                    <input type="checkbox" name="editor_2" value="12" id="setting-interest-12">
+                    科学
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-25">
+                    <input type="checkbox" name="editor_2" value="25" id="setting-interest-25">
+                    情感
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-8">
+                    <input type="checkbox" name="editor_2" value="8" id="setting-interest-8">
+                    设计
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-24">
+                    <input type="checkbox" name="editor_2" value="24" id="setting-interest-24">
+                    成长
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-34">
+                    <input type="checkbox" name="editor_2" value="34" id="setting-interest-34">
+                    自我管理
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-interest-15">
+                    <input type="checkbox" name="editor_2" value="15" id="setting-interest-15">
+                    教育
+                </label>
+            </li>
+              
+            <li class="on">
+                <label for="setting-interest-35">
+                    <input type="checkbox" name="editor_2" value="35" id="setting-interest-35" checked="&quot;checked&quot;">
+                    移动应用
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-commodity-1">
+                    <input type="checkbox" name="editor_3" value="1" id="setting-commodity-1">
+                    男装
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-commodity-2">
+                    <input type="checkbox" name="editor_3" value="2" id="setting-commodity-2">
+                    女装
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-commodity-4">
+                    <input type="checkbox" name="editor_3" value="4" id="setting-commodity-4">
+                    数码
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-commodity-5">
+                    <input type="checkbox" name="editor_3" value="5" id="setting-commodity-5">
+                    家居生活
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-commodity-6">
+                    <input type="checkbox" name="editor_3" value="6" id="setting-commodity-6">
+                    美容护肤
+                </label>
+            </li>
+              
+            <li class="">
+                <label for="setting-commodity-7">
+                    <input type="checkbox" name="editor_3" value="7" id="setting-commodity-7">
+                    户外运动
+                </label>
+            </li>
+        </ul>
+    </div>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".item :checkbox").click(function(){
+        $(this).parent().parent(). toggleClass("on");
+    });
+})
+</script>
+</body>
+</html>
